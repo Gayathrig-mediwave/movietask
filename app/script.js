@@ -1,3 +1,25 @@
+const movies = [
+  {
+    movieName: "Freedom",
+    movieYear: 2005,
+    movieGenre: "thriller",
+  },
+  {
+    movieName: "narnia",
+    movieYear: 2008,
+    movieGenre: "action",
+  },
+  {
+    movieName: "princess",
+    movieYear: 2011,
+    movieGenre: "comedy",
+  },
+];
+
+for (let movie of movies) {
+  addToMovieList(movie);
+}
+
 const addMovieForm = document.querySelector("#addMovieForm");
 
 addMovieForm.addEventListener("submit", function (event) {
@@ -7,13 +29,18 @@ addMovieForm.addEventListener("submit", function (event) {
   const movieName = formData.get("movieName");
   const movieYear = formData.get("movieYear");
   const movieGenre = formData.get("movieGenre");
-  const movie = {
+  const newMovies = {
     movieName,
     movieYear,
     movieGenre,
   };
+  console.log(newMovies);
+  movies.push(newMovies);
 
-  addToMovieList(movie);
+  //movies.push(newMovies.movieName);
+  // movies.push(newMovies.movieYear);
+  //movies.push(newMovies.movieGenre);
+  addToMovieList(movies[movies.length - 1]);
 
   event.target.reset();
 });
