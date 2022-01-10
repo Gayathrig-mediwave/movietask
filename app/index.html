@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>movie Databse</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1>Add a movie</h1>
+        <form id="addMovieForm">
+          <div>
+            <label for="movieName">Name</label>
+            <input type="text" id="movieName" name="movieName" />
+          </div>
+          <div>
+            <label for="movieYear">Year</label>
+            <input type="text" id="movieYear" name="movieYear" />
+          </div>
+          <div>
+            <label for="movieGenre">Genre</label>
+            <input type="text" id="movieGenre" name="movieGenre" />
+          </div>
+
+          <div class="btn-submit">
+            <input type="submit" value="Add movie" />
+          </div>
+        </form>
+      </div>
+
+      <hr />
+
+      <div id="movie-list"></div>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
